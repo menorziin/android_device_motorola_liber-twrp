@@ -228,3 +228,6 @@ endif
 #
 # end local build flags
 #
+
+# VINTF
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
