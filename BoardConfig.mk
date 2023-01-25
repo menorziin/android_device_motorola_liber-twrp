@@ -75,6 +75,7 @@ BOARD_KERNEL_CMDLINE := \
     cgroup.memory=nokmem,nosocket \
     androidboot.usbcontroller=4e00000.dwc3 \
     printk.devkmsg=on \
+    androidboot.boot_devices=soc/1d84000.ufshc \
     firmware_class.path=/vendor/firmware_mnt/image
 # For the love of all that is holy, please do not include this in your ROM unless you really want TWRP to not work correctly!
 BOARD_KERNEL_CMDLINE += androidboot.fastboot=1
