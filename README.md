@@ -27,7 +27,7 @@ Check here: https://github.com/Hasaber8/kernel_motorola_sm6150/commits/twrp-10
 ```sh
 . build/envsetup.sh
 export LC_ALL=C
-lunch omni_liber-eng
+lunch twrp_liber-eng
 make -j4 recoveryimage
 ```
 
