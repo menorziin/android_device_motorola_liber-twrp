@@ -26,8 +26,9 @@ AB_OTA_PARTITIONS += \
     product \
     recovery \
     system \
-    vbmeta \
-    vendor
+    system_ext \
+    vendor \
+    vbmeta
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
