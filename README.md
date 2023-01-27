@@ -18,11 +18,39 @@ Front Camera | 16 MP (f/2.0)
 
 ![Device Picture](https://fdn2.gsmarena.com/vv/pics/motorola/motorola-one-fusion-plus-1.jpg)
 
-### Kernel Source
+## Kernel Source
+Prebuilt kernel from https://github.com/menorziin/kernel_motorola_liber
 
-Check here: https://github.com/Hasaber8/kernel_motorola_sm6150/commits/twrp-10
+## Compile
 
-### How to compile
+First repo init the twrp-12.1 tree (and necessary qcom dependencies):
+
+```
+mkdir ~/android/twrp-12.1
+cd ~/android/twrp-12.1
+repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+mkdir -p .repo/local_manifests
+```
+
+Then add to a local manifest (if you don't have .repo/local_manifest then make that directory and make a blank file and name it something like twrp.xml):
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="osm0sis/twrp_abtemplate" path="bootable/recovery/installer" remote="github" revision="master"/>
+  <project name="android_device_motorla_liber" path="device/motorola/liber" remote="TeamWin" revision="android-12.1"/>
+</manifest>
+```
+
+Now you can sync your source:
+
+```
+repo sync
+```
+
+To automatically make the TWRP installer zip, you need to import this commit in the build/make path: https://gerrit.twrp.me/c/android_build/+/5445
+
+Finally execute these:
 
 ```sh
 . build/envsetup.sh
@@ -30,24 +58,3 @@ export LC_ALL=C
 lunch twrp_liber-eng
 make -j4 recoveryimage
 ```
-
-### Copyright
- ```
-  /*
-  *  Copyright (C) 2013-21 The OmniROM Project
-  *
-  * This program is free software: you can redistribute it and/or modify
-  * it under the terms of the GNU General Public License as published by
-  * the Free Software Foundation, either version 3 of the License, or
-  * (at your option) any later version.
-  *
-  * This program is distributed in the hope that it will be useful,
-  * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  * GNU General Public License for more details.
-  *
-  * You should have received a copy of the GNU General Public License
-  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  *
-  */
-  ```
