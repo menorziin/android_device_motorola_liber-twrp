@@ -18,7 +18,7 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
   DEVICE: liber
-  DT_LINK: https://github.com/Team-NoobMaster69/twrp-device_motorola_liber
+  DT_LINK: https://github.com/menorziin/android_device_motorola_liber-twrp
   DT_PATH: device/motorola/liber
   CHAT_ID: ${{ secrets.TEST_CHAT_ID }}
   BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
