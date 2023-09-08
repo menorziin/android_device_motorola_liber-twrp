@@ -38,7 +38,7 @@ Then add to a local manifest (if you don't have .repo/local_manifest then make t
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="osm0sis/twrp_abtemplate" path="bootable/recovery/installer" remote="github" revision="master"/>
-  <project name="android_device_motorla_liber" path="device/motorola/liber" remote="TeamWin" revision="android-12.1"/>
+  <project name="android_device_motorola_liber" path="device/motorola/liber" remote="TeamWin" revision="android-12.1"/>
 </manifest>
 ```
 
