@@ -1,4 +1,4 @@
-export OF_AB_DEVICE=1
+export FOX_AB_DEVICE=1
 export LC_ALL="C"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_VERSION="R12.1"
